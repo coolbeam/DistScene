@@ -1,79 +1,40 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="DistScene — holistic 3D scene generation via panoramic-to-object composition." />
-    <title>DistScene — Panoramic-to-Object 3D Scene Generation</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="noise" aria-hidden="true"></div>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="DistScene home">
-        <span class="brand-mark"><i></i><i></i><i></i></span>
-        <span>DistScene</span>
-      </a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#method">Method</a>
-        <a href="#results">Results</a>
-        <a href="#citation">Citation</a>
-      </nav>
-      <a class="header-link" href="https://github.com/coolbeam/DistScene" target="_blank" rel="noreferrer">GitHub <span>↗</span></a>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DistScene: Object-to-Scene Distillation for 3D Scene Generation." />
+  <title>DistScene: Object-to-Scene Distillation for 3D Scene Generation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar"><div class="topbar-inner"><a class="wordmark" href="#top">DistScene</a><span class="topbar-label">Project Page</span></div></header>
 
-    <main id="top">
-      <section class="hero section-shell">
-        <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> Research project · 2026</p>
-          <h1>Build the whole room<br /><em>from one view.</em></h1>
-          <p class="hero-lede">DistScene turns a single perspective image into a coherent, explorable 3D scene through a panoramic-to-object composition pipeline.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#method">Explore the method <span>↓</span></a>
-            <a class="button button-quiet" href="https://github.com/coolbeam/DistScene" target="_blank" rel="noreferrer">View code <span>↗</span></a>
-          </div>
-          <div class="hero-meta"><span>Holistic 3D generation</span><span class="meta-divider"></span><span>360° scene blueprint</span></div>
-        </div>
-        <div class="hero-art reveal reveal-delay" aria-label="A generated room scene shown as a wide panorama">
-          <div class="art-glow"></div>
-          <img src="assets/teaser.png" alt="DistScene generated scene teaser" />
-          <div class="art-label art-label-top"><span class="pulse"></span> Global blueprint</div>
-          <div class="art-label art-label-bottom">single image <span>→</span> complete scene</div>
-        </div>
-      </section>
+  <main id="top" class="page">
+    <section class="hero">
+      <p class="venue">ICLR 2027 · Project Page</p>
+      <h1>DistScene: Object-to-Scene Distillation for 3D Scene Generation</h1>
+      <div class="authors">
+        <span>Kunming Luo<sup>1,2,*</sup></span><span>Hongyu Yan<sup>1,*</sup></span><span>Ken Deng<sup>1,*</sup></span><span>Chengcheng Zhou<sup>2</sup></span><span>Tianyu Liu<sup>1</sup></span><span>Haipeng Li<sup>1</sup></span><span>Haibin Huang<sup>2</sup></span><span>Xuelong Li<sup>2,†</sup></span><span>Ping Tan<sup>1,†</sup></span>
+      </div>
+      <p class="affiliations"><sup>1</sup>The Hong Kong University of Science and Technology &nbsp;&nbsp; <sup>2</sup>TeleAI, China Telecom</p>
+      <p class="author-notes">* Equal contribution &nbsp;&nbsp; † Corresponding author &nbsp;&nbsp; Work done during an internship at TeleAI</p>
+      <div class="resource-links" aria-label="Project resources">
+        <a href="./" class="resource-link">arXiv <span>(come soon)</span></a><a href="./" class="resource-link">Code <span>(come soon)</span></a><a href="./" class="resource-link">Checkpoint <span>(come soon)</span></a><a href="./" class="resource-link">Dataset <span>(come soon)</span></a>
+      </div>
+    </section>
 
-      <section class="intro section-shell reveal">
-        <p class="section-kicker">The idea</p>
-        <div class="intro-grid">
-          <h2>A panorama gives 3D generation a place to start.</h2>
-          <div class="intro-text"><p>Instead of asking a 3D model to invent every part of a room at once, DistScene first creates a globally consistent 360° panorama. That blueprint captures layout, object distribution, and visual style before the scene is decomposed into clean, reusable assets.</p><p>The result is a scene that stays holistic from every viewpoint while keeping the diversity of generative assets.</p></div>
-        </div>
-      </section>
+    <section class="media-section" aria-labelledby="video-title"><h2 id="video-title">Video</h2><div class="video-placeholder"><span>Video coming soon</span></div></section>
 
-      <section id="method" class="method section-shell">
-        <div class="section-heading reveal"><div><p class="section-kicker">The pipeline</p><h2>From image to world</h2></div><p class="section-note">A global-to-local workflow<br />for compositional scenes.</p></div>
-        <div class="steps">
-          <article class="step-card reveal"><div class="step-number">01</div><div class="step-icon icon-panorama"></div><h3>Panorama</h3><p>Generate a spatially plausible 360° blueprint from a single perspective image.</p><span class="step-tag">VVA</span></article>
-          <article class="step-card reveal reveal-delay"><div class="step-number">02</div><div class="step-icon icon-layout"></div><h3>Layout</h3><p>Parse the panorama into room geometry, point clouds, and object-level boxes.</p><span class="step-tag">scene parsing</span></article>
-          <article class="step-card reveal reveal-delay-2"><div class="step-number">03</div><div class="step-icon icon-assets"></div><h3>Assets</h3><p>Refine distorted object views, then lift them into high-fidelity 3D assets.</p><span class="step-tag">VRM</span></article>
-          <article class="step-card reveal reveal-delay-3"><div class="step-number">04</div><div class="step-icon icon-assembly"></div><h3>Assembly</h3><p>Place every asset into a coherent scene with box-constrained adjustment.</p><span class="step-tag">BCA</span></article>
-        </div>
-      </section>
+    <section class="method-section" aria-labelledby="method-title">
+      <div class="section-heading"><p class="section-number">01</p><div><h2 id="method-title">Method</h2><p>DistScene distills object-level generation into a coherent 3D scene.</p></div></div>
+      <figure class="paper-figure"><img src="assets/pipeline.png" alt="DistScene pipeline overview from an input image to a panoramic blueprint, object assets, and a composed 3D scene" /><figcaption><strong>Figure 2.</strong> Overview of DistScene. A 360° panorama acts as a global blueprint, object observations are refined and lifted into 3D assets, and the assets are assembled into a coherent scene.</figcaption></figure>
+      <figure class="paper-figure narrow-figure"><img src="assets/virtual-view-augmentation.png" alt="Virtual-view augmentation scheme using 3D point clouds and randomly sampled virtual cameras" /><figcaption><strong>Figure 3.</strong> Virtual-view Augmentation. Random virtual views rendered from a lifted point cloud reduce the field-of-view and distortion bias in panorama training.</figcaption></figure>
+    </section>
 
-      <section id="results" class="results section-shell reveal">
-        <div class="results-panel"><div><p class="section-kicker">Why it works</p><h2>Global context.<br /><em>Local control.</em></h2></div><p>DistScene uses the panorama as a shared coordinate system. Room-level coherence comes first; object-level generation stays flexible. This separation makes it possible to explore new scene content without losing the structure of the original view.</p><div class="stat-row"><div><strong>360°</strong><span>global coverage</span></div><div><strong>4</strong><span>pipeline stages</span></div><div><strong>1</strong><span>input image</span></div></div></div>
-        <div class="result-visual"><div class="grid-lines"></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="core"><span>3D</span><small>scene</small></div><div class="visual-caption">panorama → objects → world</div></div>
-      </section>
+    <section class="demo-section" aria-labelledby="demo-title"><div class="section-heading"><p class="section-number">02</p><div><h2 id="demo-title">Demo</h2><p>Interactive scene demonstrations will be added here.</p></div></div><div class="demo-placeholder"><span>Demo coming soon</span></div></section>
+  </main>
 
-      <section id="citation" class="citation section-shell reveal"><div class="citation-head"><div><p class="section-kicker">Reference</p><h2>Stay close to the work.</h2></div><button class="copy-button" id="copy-citation" type="button">Copy BibTeX <span>⌘ C</span></button></div><pre id="bibtex"><code>@inproceedings{distscene2026,
-  title     = {DistScene: Holistic 3D Scene Generation via Panoramic-to-Object Composition},
-  author    = {Anonymous Authors},
-  booktitle = {European Conference on Computer Vision},
-  year      = {2026}
-}</code></pre><p class="citation-footnote" id="copy-status" aria-live="polite">The citation block is a working placeholder while the paper metadata is finalized.</p></section>
-    </main>
-
-    <footer class="site-footer section-shell"><span>DistScene · project page scaffold</span><span>Built for the next scene</span></footer>
-    <script src="script.js"></script>
-  </body>
+  <footer class="footer"><span>DistScene</span><span>Object-to-Scene Distillation for 3D Scene Generation</span></footer>
+</body>
 </html>

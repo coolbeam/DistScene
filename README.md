@@ -1,15 +1,13 @@
 # DistScene project page
 
-A static project page scaffold for **DistScene: Holistic 3D Scene Generation via Panoramic-to-Object Composition**.
+Static project page for **DistScene: Object-to-Scene Distillation for 3D Scene Generation**.
 
 ## Local preview
 
-Open `index.html` directly, or serve the folder with any static server:
-
 ```bash
-python -m http.server 8000
+python -m http.server 4173
 ```
 
-Then visit <http://localhost:8000>.
+Open <http://127.0.0.1:4173>.
 
-The current copy uses the working paper title and a placeholder BibTeX entry. Replace the author, venue, links, and result assets as the project metadata is finalized.
+The resource buttons intentionally link back to this project page until the arXiv, code, checkpoint, and dataset URLs are ready. The video and demo areas are placeholders.
