@@ -38,9 +38,23 @@
       </figure>
     </section>
 
-    <section class="demo-section" aria-labelledby="demo-title"><div class="section-heading"><p class="section-number">02</p><div><h2 id="demo-title">Demo</h2><p>Interactive scene demonstrations will be added here.</p></div></div><div class="demo-placeholder"><span>Demo coming soon</span></div></section>
+    <section class="demo-section" aria-labelledby="demo-title">
+      <div class="section-heading"><p class="section-number">02</p><div><h2 id="demo-title">Demo</h2><p>Local preview of three compressed scene assets.</p></div></div>
+      <div class="demo-controls" aria-label="Choose a demo scene">
+        <button class="scene-button is-active" type="button" data-scene="PIPR01_002_03b">PIPR01_002_03b</button>
+        <button class="scene-button" type="button" data-scene="DistScene_v18">DistScene_v18</button>
+        <button class="scene-button" type="button" data-scene="EXT002_p90">EXT002_p90</button>
+      </div>
+      <div class="viewer-frame">
+        <model-viewer id="scene-viewer" src="assets/demo-scenes/PIPR01_002_03b/preview.glb" camera-controls auto-rotate shadow-intensity="0.8" exposure="1" loading="eager" alt="Interactive DistScene 3D scene preview"></model-viewer>
+        <div class="viewer-status" id="viewer-status">PIPR01_002_03b · drag to orbit · scroll to zoom</div>
+      </div>
+      <p class="local-note">These are local preview files only. The original scene files remain on the server and are not part of the web page repository.</p>
+    </section>
   </main>
 
   <footer class="footer"><span>DistScene</span><span>Object-to-Scene Distillation for 3D Scene Generation</span></footer>
+  <script type="module" src="https://unpkg.com/@google/model-viewer@4.1.0/dist/model-viewer.min.js"></script>
+  <script src="demo.js"></script>
 </body>
 </html>

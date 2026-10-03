@@ -20,3 +20,13 @@ Use the DistScene manuscript at `../latex/paper_overleaf/iclr2027/main.tex`, whi
 - Figure 3 (`fig:inference`): `figures/method_structure.pdf`, referenced at `sections/method_dk.tex:52`.
 
 The website PNGs are rendered from these original PDFs with Poppler (`-cropbox -scale-to 2400 -png -singlefile`). Captions follow the same LaTeX source. Do not use figures from `km_3dscene_nips2026`: that directory contains the separate HoloRoom paper.
+
+## Local 3D preview
+
+Three local-only preview models are currently available under `assets/demo-scenes/`:
+
+- `PIPR01_002_03b`: 27 MB
+- `DistScene_v18`: 60 MB
+- `EXT002_p90`: 41 MB
+
+The previews were generated on the scene server by simplifying the geometry to roughly 8% of the original face count and assigning per-object average material colors. This keeps the files interactive in a browser while avoiding a 350 MB+ textured download. The original textured GLBs were not modified. The preview GLBs are ignored by Git and should move to object storage/CDN when the project page is published.
