@@ -15,46 +15,37 @@
       <p class="venue">ICLR 2027 · Project Page</p>
       <h1>DistScene: Object-to-Scene Distillation for 3D Scene Generation</h1>
       <div class="authors">
-        <span>Kunming Luo<sup>1,2,*</sup></span><span>Hongyu Yan<sup>1,*</sup></span><span>Ken Deng<sup>1,*</sup></span><span>Chengcheng Zhou<sup>2</sup></span><span>Tianyu Liu<sup>1</sup></span><span>Haipeng Li<sup>1</sup></span><span>Haibin Huang<sup>2</sup></span><span>Xuelong Li<sup>2,†</sup></span><span>Ping Tan<sup>1,†</sup></span>
+        <span>Kunming Luo</span><span>Hongyu Yan</span><span>Ken Deng</span><span>Chengcheng Zhou</span><span>Tianyu Liu</span><span>Haipeng Li</span><span>Haibin Huang</span><span>Xuelong Li</span><span>Ping Tan</span>
       </div>
-      <p class="affiliations"><sup>1</sup>The Hong Kong University of Science and Technology &nbsp;&nbsp; <sup>2</sup>TeleAI, China Telecom</p>
-      <p class="author-notes">* Equal contribution &nbsp;&nbsp; † Corresponding author &nbsp;&nbsp; Work done during an internship at TeleAI</p>
       <div class="resource-links" aria-label="Project resources">
-        <a href="./" class="resource-link">arXiv <span>(come soon)</span></a><a href="./" class="resource-link">Code <span>(come soon)</span></a><a href="./" class="resource-link">Checkpoint <span>(come soon)</span></a><a href="./" class="resource-link">Dataset <span>(come soon)</span></a>
+        <a href="https://github.com/coolbeam/DistScene" class="resource-link">arXiv <span>(come soon)</span></a><a href="https://github.com/coolbeam/DistScene" class="resource-link">Code <span>(come soon)</span></a><a href="https://github.com/coolbeam/DistScene" class="resource-link">Checkpoint <span>(come soon)</span></a><a href="https://github.com/coolbeam/DistScene" class="resource-link">Dataset <span>(come soon)</span></a>
       </div>
     </section>
 
-    <section class="media-section" aria-labelledby="video-title"><h2 id="video-title">Video</h2><div class="video-placeholder"><span>Video coming soon</span></div></section>
+    <section class="media-section">
+      <div class="video-frame">
+        <video controls preload="metadata" playsinline aria-label="DistScene demonstration video">
+          <source src="assets/demo-video/v6.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </section>
 
     <section class="method-section" aria-labelledby="method-title">
       <div class="section-heading"><p class="section-number">01</p><div><h2 id="method-title">Method</h2><p>DistScene distills object-level generation into a coherent 3D scene.</p></div></div>
       <figure class="paper-figure">
         <img src="assets/distscene-figure-2-data.png" alt="DistScene self-distilled data curation: Trellis.2 generates objects and environments, physics checks guide scene assembly, and rendering provides conditioning images." />
-        <figcaption><strong>Figure 2. Self-Distilled Data Curation.</strong> We adopt Trellis.2 as the object generator from which training data are distilled. First, a VLM generates descriptions of 3D assets, including objects and environments; these descriptions are then used to generate the corresponding input images for Trellis.2. After the 3D assets are obtained, we place them into the generated environments with physics checks. Finally, we render condition images for each scene as conditioning inputs.</figcaption>
+        <figcaption>Left: an overview of the complete self-distillation process. Right: the data curation stage. We adopt Trellis.2 as the object generator from which training data are distilled. A VLM first generates descriptions of 3D assets, including objects and environments; these descriptions are then used to generate the corresponding input images for Trellis.2. After obtaining the 3D assets, we place them into the generated environments with physics checks and render conditioning images for each scene.</figcaption>
       </figure>
       <figure class="paper-figure">
         <img src="assets/distscene-figure-3-inference.png" alt="DistScene inference pipeline: scene frame generation jointly synthesizes the environment and objects, followed by object-centric refinement and placement back into the scene." />
-        <figcaption><strong>Figure 3. Inference Pipeline.</strong> Left: the environment and objects are jointly generated in a shared scene frame through two stages, sparse structure generation and geometry-latent generation. Right: each generated object is transformed to a local voxel support for scene-conditioned refinement and then placed back into the scene using the inverse transformation.</figcaption>
+        <figcaption>Left: the environment and objects are jointly generated in a shared scene frame through two stages, sparse structure generation and geometry-latent generation. Right: each generated object is transformed to a local voxel support for scene-conditioned refinement and then placed back into the scene using the inverse transformation.</figcaption>
       </figure>
     </section>
 
-    <section class="demo-section" aria-labelledby="demo-title">
-      <div class="section-heading"><p class="section-number">02</p><div><h2 id="demo-title">Demo</h2><p>Local preview of three compressed scene assets.</p></div></div>
-      <div class="demo-controls" aria-label="Choose a demo scene">
-        <button class="scene-button is-active" type="button" data-scene="PIPR01_002_03b">PIPR01_002_03b</button>
-        <button class="scene-button" type="button" data-scene="DistScene_v18">DistScene_v18</button>
-        <button class="scene-button" type="button" data-scene="EXT002_p90">EXT002_p90</button>
-      </div>
-      <div class="viewer-frame">
-        <model-viewer id="scene-viewer" src="assets/demo-scenes/PIPR01_002_03b/preview.glb" camera-controls auto-rotate shadow-intensity="0.8" exposure="1" loading="eager" alt="Interactive DistScene 3D scene preview"></model-viewer>
-        <div class="viewer-status" id="viewer-status">PIPR01_002_03b · drag to orbit · scroll to zoom</div>
-      </div>
-      <p class="local-note">These are local preview files only. The original scene files remain on the server and are not part of the web page repository.</p>
-    </section>
   </main>
 
-  <footer class="footer"><span>DistScene</span><span>Object-to-Scene Distillation for 3D Scene Generation</span></footer>
-  <script type="module" src="https://unpkg.com/@google/model-viewer@4.1.0/dist/model-viewer.min.js"></script>
-  <script src="demo.js"></script>
 </body>
 </html>
+
+

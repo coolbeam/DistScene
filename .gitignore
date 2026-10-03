@@ -1,1 +1,2 @@
-assets/demo-scenes/**/*.glb
+assets/demo-scenes/
+assets/draco_decoder/
