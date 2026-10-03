@@ -32,7 +32,7 @@
     </section>
 
     <section class="method-section" aria-labelledby="method-title">
-      <div class="section-heading"><p class="section-number">01</p><div><h2 id="method-title">Method</h2><p>DistScene distills object-level generation into a coherent 3D scene.</p></div></div>
+      <div class="section-heading"><p class="section-number">01</p><div><h2 id="method-title">Method</h2></div></div>
       <figure class="paper-figure">
         <img src="assets/distscene-figure-2-data.png" alt="DistScene self-distilled data curation: Trellis.2 generates objects and environments, physics checks guide scene assembly, and rendering provides conditioning images." />
         <figcaption>Left: an overview of the complete self-distillation process. Right: the data curation stage. We adopt Trellis.2 as the object generator from which training data are distilled. A VLM first generates descriptions of 3D assets, including objects and environments; these descriptions are then used to generate the corresponding input images for Trellis.2. After obtaining the 3D assets, we place them into the generated environments with physics checks and render conditioning images for each scene.</figcaption>
