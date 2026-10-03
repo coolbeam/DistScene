@@ -28,8 +28,14 @@
 
     <section class="method-section" aria-labelledby="method-title">
       <div class="section-heading"><p class="section-number">01</p><div><h2 id="method-title">Method</h2><p>DistScene distills object-level generation into a coherent 3D scene.</p></div></div>
-      <figure class="paper-figure"><img src="assets/pipeline.png" alt="DistScene pipeline overview from an input image to a panoramic blueprint, object assets, and a composed 3D scene" /><figcaption><strong>Figure 2.</strong> Overview of DistScene. A 360° panorama acts as a global blueprint, object observations are refined and lifted into 3D assets, and the assets are assembled into a coherent scene.</figcaption></figure>
-      <figure class="paper-figure narrow-figure"><img src="assets/virtual-view-augmentation.png" alt="Virtual-view augmentation scheme using 3D point clouds and randomly sampled virtual cameras" /><figcaption><strong>Figure 3.</strong> Virtual-view Augmentation. Random virtual views rendered from a lifted point cloud reduce the field-of-view and distortion bias in panorama training.</figcaption></figure>
+      <figure class="paper-figure">
+        <img src="assets/distscene-figure-2-data.png" alt="DistScene self-distilled data curation: Trellis.2 generates objects and environments, physics checks guide scene assembly, and rendering provides conditioning images." />
+        <figcaption><strong>Figure 2. Self-Distilled Data Curation.</strong> We adopt Trellis.2 as the object generator from which training data are distilled. First, a VLM generates descriptions of 3D assets, including objects and environments; these descriptions are then used to generate the corresponding input images for Trellis.2. After the 3D assets are obtained, we place them into the generated environments with physics checks. Finally, we render condition images for each scene as conditioning inputs.</figcaption>
+      </figure>
+      <figure class="paper-figure">
+        <img src="assets/distscene-figure-3-inference.png" alt="DistScene inference pipeline: scene frame generation jointly synthesizes the environment and objects, followed by object-centric refinement and placement back into the scene." />
+        <figcaption><strong>Figure 3. Inference Pipeline.</strong> Left: the environment and objects are jointly generated in a shared scene frame through two stages, sparse structure generation and geometry-latent generation. Right: each generated object is transformed to a local voxel support for scene-conditioned refinement and then placed back into the scene using the inverse transformation.</figcaption>
+      </figure>
     </section>
 
     <section class="demo-section" aria-labelledby="demo-title"><div class="section-heading"><p class="section-number">02</p><div><h2 id="demo-title">Demo</h2><p>Interactive scene demonstrations will be added here.</p></div></div><div class="demo-placeholder"><span>Demo coming soon</span></div></section>
