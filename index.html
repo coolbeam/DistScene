@@ -31,10 +31,12 @@
     <section class="method-section" aria-labelledby="method-title">
       <div class="section-heading"><div><h2 id="method-title">Method</h2></div></div>
       <figure class="paper-figure">
+        <h3 class="figure-title">Object-to-Scene Distillation: Automatic and Scalable Training Data Generation</h3>
         <img src="assets/distscene-figure-2-data.png" alt="DistScene self-distilled data curation: Trellis.2 generates objects and environments, physics checks guide scene assembly, and rendering provides conditioning images." />
         <figcaption>Left: an overview of the complete self-distillation process. Right: the data curation stage. We adopt Trellis.2 as the object generator from which training data are distilled. A VLM first generates descriptions of 3D assets, including objects and environments; these descriptions are then used to generate the corresponding input images for Trellis.2. After obtaining the 3D assets, we place them into the generated environments with physics checks and render conditioning images for each scene.</figcaption>
       </figure>
       <figure class="paper-figure">
+        <h3 class="figure-title">Unified Scene Representation: Scene Frame Generation with Object-Centric Refinement</h3>
         <img src="assets/distscene-figure-3-inference.png" alt="DistScene inference pipeline: scene frame generation jointly synthesizes the environment and objects, followed by object-centric refinement and placement back into the scene." />
         <figcaption>Left: the environment and objects are jointly generated in a shared scene frame through two stages, sparse structure generation and geometry-latent generation. Right: each generated object is transformed to a local voxel support for scene-conditioned refinement and then placed back into the scene using the inverse transformation.</figcaption>
       </figure>
