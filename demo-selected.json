@@ -1,0 +1,149 @@
+[
+  {
+    "case": "EXT018_p90",
+    "input": "assets/demo-inputs/EXT018_p90.png",
+    "previewSize": 63471984,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/EXT018_p90.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/EXT018_p90.png"
+  },
+  {
+    "case": "EXT027_p75",
+    "input": "assets/demo-inputs/EXT027_p75.png",
+    "previewSize": 52215108,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/EXT027_p75.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/EXT027_p75.png"
+  },
+  {
+    "case": "EXT060_p90",
+    "input": "assets/demo-inputs/EXT060_p90.png",
+    "previewSize": 81124232,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/EXT060_p90.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/EXT060_p90.png"
+  },
+  {
+    "case": "EXT083_p75",
+    "input": "assets/demo-inputs/EXT083_p75.png",
+    "previewSize": 71075248,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/EXT083_p75.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/EXT083_p75.png"
+  },
+  {
+    "case": "N048_p90",
+    "input": "assets/demo-inputs/N048_p90.png",
+    "previewSize": 53963000,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/N048_p90.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/N048_p90.png"
+  },
+  {
+    "case": "N090_p90",
+    "input": "assets/demo-inputs/N090_p90.png",
+    "previewSize": 64017528,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/N090_p90.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/N090_p90.png"
+  },
+  {
+    "case": "O01_p90",
+    "input": "assets/demo-inputs/O01_p90.png",
+    "previewSize": 65614504,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/O01_p90.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/O01_p90.png"
+  },
+  {
+    "case": "G071_p90",
+    "input": "assets/demo-inputs/G071_p90.png",
+    "previewSize": 63309284,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/G071_p90.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/G071_p90.png"
+  },
+  {
+    "case": "G085_p90",
+    "input": "assets/demo-inputs/G085_p90.png",
+    "previewSize": 50523244,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/G085_p90.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/G085_p90.png"
+  },
+  {
+    "case": "G011_p90",
+    "input": "assets/demo-inputs/G011_p90.png",
+    "previewSize": 51639792,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/G011_p90.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/G011_p90.png"
+  },
+  {
+    "case": "G028_p90",
+    "input": "assets/demo-inputs/G028_p90.png",
+    "previewSize": 52455564,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/G028_p90.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/G028_p90.png"
+  },
+  {
+    "case": "G064_p90",
+    "input": "assets/demo-inputs/G064_p90.png",
+    "previewSize": 60788336,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/G064_p90.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/G064_p90.png"
+  },
+  {
+    "case": "G068_p90",
+    "input": "assets/demo-inputs/G068_p90.png",
+    "previewSize": 71820880,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/G068_p90.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/G068_p90.png"
+  },
+  {
+    "case": "IP037B_p75",
+    "input": "assets/demo-inputs/IP037B_p75.png",
+    "previewSize": 51191624,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/IP037B_p75.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/IP037B_p75.png"
+  },
+  {
+    "case": "C000",
+    "input": "assets/demo-inputs/C000.png",
+    "previewSize": 98922400,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/C000.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/C000.png"
+  },
+  {
+    "case": "C005",
+    "input": "assets/demo-inputs/C005.png",
+    "previewSize": 96765552,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/C005.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/C005.png"
+  },
+  {
+    "case": "C006",
+    "input": "assets/demo-inputs/C006.png",
+    "previewSize": 75686392,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/C006.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/C006.png"
+  },
+  {
+    "case": "C064",
+    "input": "assets/demo-inputs/C064.png",
+    "previewSize": 72963580,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/C064.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/C064.png"
+  },
+  {
+    "case": "C195",
+    "input": "assets/demo-inputs/C195.png",
+    "previewSize": 65606672,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/C195.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/C195.png"
+  },
+  {
+    "case": "C111",
+    "input": "assets/demo-inputs/C111.png",
+    "previewSize": 86839264,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/C111.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/C111.png"
+  },
+  {
+    "case": "PIPR01_002_03b",
+    "input": "assets/demo-inputs/PIPR01_002_03b.png",
+    "previewSize": 27114312,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/PIPR01_002_03b/preview.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/PIPR01_002_03b/formal-input.png"
+  }
+]

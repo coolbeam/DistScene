@@ -43,24 +43,36 @@
     </section>
 
     <section class="demo-section" aria-labelledby="demo-title">
-      <div class="section-heading"><div><h2 id="demo-title">Demo</h2><p>Interactive preview loaded on demand from the DistScene asset library.</p></div></div>
-      <div class="demo-controls" aria-label="Choose a demo scene">
-        <button class="scene-button is-active" type="button" data-scene="PIPR01_002_03b">PIPR01_002_03b</button>
+      <div class="section-heading"><div><h2 id="demo-title">Interactive Demo</h2><p>Select an input image to load its generated 3D scene.</p><p class="demo-note">Note that this 3D scene is a compressed preview version, approximately 10% of the original generated result. Please refer to <a href="https://huggingface.co/coolbeam/DistScene-preview-assets" target="_blank" rel="noopener noreferrer">results</a> for the detailed result.</p></div></div>
+      <div class="demo-upper-row">
+        <div class="demo-strip-wrap" aria-label="Selected input images">
+          <div class="demo-strip" id="demo-strip" role="list"></div>
+        </div>
+        <button class="selected-input-panel" id="selected-input-open" type="button" aria-label="Open selected input image">
+          <img id="selected-input" alt="Selected input image" />
+        </button>
       </div>
-      <div class="demo-input-row"><img src="https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/PIPR01_002_03b/formal-input.png" alt="PIPR01_002_03b formal input image" /><span>Formal input image</span></div>
-      <p class="preview-note">Compressed version for preview · 25.86 MiB · loaded from Hugging Face on demand.</p>
-      <div class="viewer-frame">
-        <model-viewer id="scene-viewer" dracoDecoderLocation="https://www.gstatic.com/draco/versioned/decoders/1.5.7/" src="https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/PIPR01_002_03b/preview.glb" camera-controls shadow-intensity="0.8" exposure="1" loading="eager" alt="Interactive compressed DistScene 3D scene preview"></model-viewer>
-        <div class="viewer-status" id="viewer-status">Loading compressed preview…</div>
+      <div class="demo-selection" id="demo-selection">
+        <div class="viewer-frame">
+          <model-viewer id="scene-viewer" dracoDecoderLocation="https://www.gstatic.com/draco/versioned/decoders/1.5.7/" camera-controls shadow-intensity="0.8" exposure="1" loading="eager" alt="Interactive compressed DistScene 3D scene preview"></model-viewer>
+          <div class="viewer-status" id="viewer-status">Select an input image to load its preview.</div>
+        </div>
       </div>
-      <p class="local-note">The GitHub Pages repository keeps only this lightweight interface. Preview GLB assets are hosted separately and downloaded only when the Demo is opened.</p>
     </section>
 
   </main>
 
+  <div class="image-lightbox" id="image-lightbox" hidden>
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close image">×</button>
+    <img id="lightbox-image" alt="Expanded selected input image" />
+  </div>
+
   <script type="module" src="https://unpkg.com/@google/model-viewer@4.1.0/dist/model-viewer.min.js"></script>
-  <script src="demo.js"></script>
+  <script src="demo.js?v=5"></script>
 </body>
 </html>
+
+
+
 
 
