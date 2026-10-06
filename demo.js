@@ -1,3 +1,24 @@
+
+const mainVideo = document.querySelector("#main-demo-video");
+const mainVideoStatus = document.querySelector("#main-video-status");
+if (mainVideo) {
+  fetch("assets/demo-video/v6.mp4", { cache: "force-cache" })
+    .then(response => {
+      if (!response.ok) throw new Error(`video HTTP ${response.status}`);
+      return response.blob();
+    })
+    .then(blob => {
+      mainVideo.src = URL.createObjectURL(blob);
+      mainVideo.load();
+      mainVideo.addEventListener("canplaythrough", () => {
+        if (mainVideoStatus) mainVideoStatus.textContent = "Ready · complete video buffered";
+        mainVideo.play().catch(() => {});
+      }, { once: true });
+    })
+    .catch(error => {
+      if (mainVideoStatus) mainVideoStatus.textContent = `Unable to load demo video: ${error.message}`;
+    });
+}
 const viewer = document.querySelector("#scene-viewer");
 const status = document.querySelector("#viewer-status");
 const strip = document.querySelector("#demo-strip");

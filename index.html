@@ -21,10 +21,7 @@
 
     <section class="media-section">
       <div class="video-frame">
-        <video controls preload="metadata" playsinline aria-label="DistScene demonstration video">
-          <source src="assets/demo-video/v6.mp4" type="video/mp4" />
-          Your browser does not support HTML5 video.
-        </video>
+        <video id="main-demo-video" controls preload="none" playsinline muted loop aria-label="DistScene demonstration video"></video><div class="main-video-status" id="main-video-status">Loading the complete demo video before playback…</div>
       </div>
     </section>
 
@@ -76,7 +73,7 @@
     <img id="lightbox-image" alt="Expanded selected input image" />
   </div>
 
-  <script src="demo.js?v=6"></script>
+  <script src="demo.js?v=7"></script>
 </body>
 </html>
 
