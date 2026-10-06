@@ -3,6 +3,23 @@ const status = document.querySelector("#viewer-status");
 const strip = document.querySelector("#demo-strip");
 const selectedInput = document.querySelector("#selected-input");
 const selectedInputOpen = document.querySelector("#selected-input-open");
+const demoSelection = document.querySelector("#demo-selection");
+const viewerOpen = document.querySelector("#viewer-open");
+const viewerClose = document.querySelector("#viewer-close");
+let viewerVisible = false;
+let modelViewerReady = null;
+function loadModelViewer() {
+  if (modelViewerReady) return modelViewerReady;
+  modelViewerReady = new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.type = "module";
+    script.src = "https://unpkg.com/@google/model-viewer@4.1.0/dist/model-viewer.min.js";
+    script.onload = resolve;
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+  return modelViewerReady;
+}
 const lightbox = document.querySelector("#image-lightbox");
 const lightboxImage = document.querySelector("#lightbox-image");
 const lightboxClose = document.querySelector("#lightbox-close");
@@ -17,9 +34,36 @@ function selectScene(scene, button) {
   selectedInput.src = scene.input;
   selectedInput.alt = "Selected input image";
   viewer.removeAttribute("src");
-  setStatus("Loading preview from Hugging Face…");
-  requestAnimationFrame(() => { viewer.src = scene.hfPreview; });
+  setStatus(viewerVisible ? "Loading preview from Hugging Face…" : "Preview is closed. Click Open 3D preview to load it.");
+  if (viewerVisible) requestAnimationFrame(() => { viewer.src = scene.hfPreview; });
 }
+
+async function openViewer() {
+  if (!active || viewerVisible) return;
+  viewerVisible = true;
+  demoSelection.hidden = false;
+  viewerOpen.disabled = true;
+  viewerClose.disabled = false;
+  setStatus("Loading preview from Hugging Face…");
+  try {
+    await loadModelViewer();
+    viewer.setAttribute("src", active.hfPreview);
+    viewer.src = active.hfPreview;
+  } catch {
+    setStatus("Unable to load the 3D viewer.", true);
+  }
+}
+function closeViewer() {
+  viewerVisible = false;
+  viewer.removeAttribute("src");
+  demoSelection.hidden = true;
+  viewerOpen.disabled = false;
+  viewerClose.disabled = true;
+  setStatus("Preview is closed. Click Open 3D preview to load it.");
+}
+viewerOpen?.addEventListener("click", openViewer);
+viewerClose?.addEventListener("click", closeViewer);
+
 viewer.addEventListener("load", () => {
   if (active) setStatus(`Preview file · ${fmt(active.previewSize)} · drag to orbit · scroll to zoom`);
 });
@@ -59,7 +103,11 @@ const renderedInput = document.querySelector("#rendered-input");
 const renderedInputOpen = document.querySelector("#rendered-input-open");
 const renderedVideo = document.querySelector("#rendered-video");
 const renderedVideoStatus = document.querySelector("#rendered-video-status");
+const renderedVideoFrame = document.querySelector("#rendered-video-frame");
+const renderedOpen = document.querySelector("#rendered-open");
+const renderedClose = document.querySelector("#rendered-close");
 let renderedActive = null;
+let renderedVisible = false;
 function setRenderedStatus(text, error = false) {
   if (!renderedVideoStatus) return;
   renderedVideoStatus.textContent = text;
@@ -70,12 +118,39 @@ function selectRendered(item, button) {
   renderedStrip.querySelectorAll(".demo-thumb").forEach(node => node.classList.toggle("is-active", node === button));
   renderedInput.src = item.input;
   renderedInput.alt = `${item.case} input image`;
+  if (renderedVisible) loadRenderedVideo();
+  else setRenderedStatus("Video is hidden. Click Show video to load it.");
+}
+
+function loadRenderedVideo() {
+  if (!renderedActive) return;
   renderedVideo.pause();
-  renderedVideo.src = item.hfVideo;
+  renderedVideo.src = renderedActive.hfVideo;
   renderedVideo.load();
   renderedVideo.play().catch(() => {});
   setRenderedStatus("Loading rendered video from Hugging Face…");
 }
+function openRenderedVideo() {
+  if (renderedVisible) return;
+  renderedVisible = true;
+  renderedVideoFrame.hidden = false;
+  renderedOpen.disabled = true;
+  renderedClose.disabled = false;
+  loadRenderedVideo();
+}
+function closeRenderedVideo() {
+  renderedVisible = false;
+  renderedVideo.pause();
+  renderedVideo.removeAttribute("src");
+  renderedVideo.load();
+  renderedVideoFrame.hidden = true;
+  renderedOpen.disabled = false;
+  renderedClose.disabled = true;
+  setRenderedStatus("Video is hidden until you click Show video.");
+}
+renderedOpen?.addEventListener("click", openRenderedVideo);
+renderedClose?.addEventListener("click", closeRenderedVideo);
+
 renderedVideo?.addEventListener("loadedmetadata", () => {
   if (renderedActive) {
     setRenderedStatus(`Rendered video · ${(renderedActive.videoSize / 1048576).toFixed(1)} MiB · ${renderedVideo.videoWidth}×${renderedVideo.videoHeight}`);

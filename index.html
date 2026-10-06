@@ -43,7 +43,7 @@
     </section>
 
     <section class="demo-section" aria-labelledby="demo-title">
-      <div class="section-heading"><div><h2 id="demo-title">Interactive Demo</h2><p>Select an input image to load its generated 3D scene.</p><p class="demo-note">Note that this 3D scene is a compressed preview version, approximately 10% of the original generated result. Please refer to <a href="https://huggingface.co/coolbeam/DistScene-preview-assets" target="_blank" rel="noopener noreferrer">results</a> for the detailed result.</p></div></div>
+      <div class="section-heading"><div><h2 id="demo-title">Interactive Demo</h2><p>Select an input image, then open the preview when needed.</p><p class="demo-note">Note that this 3D scene is a compressed preview version, approximately 10% of the original generated result. Please refer to <a href="https://huggingface.co/coolbeam/DistScene-preview-assets" target="_blank" rel="noopener noreferrer">results</a> for the detailed result.</p></div><div class="demo-toggle" role="group" aria-label="3D preview controls"><button id="viewer-open" class="scene-button" type="button">Open 3D preview</button><button id="viewer-close" class="scene-button" type="button" disabled>Close 3D preview</button></div></div>
       <div class="demo-upper-row">
         <div class="demo-strip-wrap" aria-label="Selected input images">
           <div class="demo-strip" id="demo-strip" role="list"></div>
@@ -52,21 +52,21 @@
           <img id="selected-input" alt="Selected input image" />
         </button>
       </div>
-      <div class="demo-selection" id="demo-selection">
+      <div class="demo-selection" id="demo-selection" hidden>
         <div class="viewer-frame">
-          <model-viewer id="scene-viewer" dracoDecoderLocation="https://www.gstatic.com/draco/versioned/decoders/1.5.7/" camera-controls shadow-intensity="0.8" exposure="1" loading="eager" alt="Interactive compressed DistScene 3D scene preview"></model-viewer>
+          <model-viewer id="scene-viewer" dracoDecoderLocation="https://www.gstatic.com/draco/versioned/decoders/1.5.7/" camera-controls shadow-intensity="0.8" exposure="1" alt="Interactive compressed DistScene 3D scene preview"></model-viewer>
           <div class="viewer-status" id="viewer-status">Select an input image to load its preview.</div>
         </div>
       </div>
     </section>
 
     <section class="demo-section rendered-demo-section" aria-labelledby="rendered-demo-title">
-      <div class="section-heading"><div><h2 id="rendered-demo-title">Rendered Demo</h2><p>Select an input image to view its rendered scene video.</p></div></div>
+      <div class="section-heading"><div><h2 id="rendered-demo-title">Rendered Demo</h2><p>Select an input image, then show the video when needed.</p></div><div class="demo-toggle" role="group" aria-label="Rendered video controls"><button id="rendered-open" class="scene-button" type="button">Show video</button><button id="rendered-close" class="scene-button" type="button" disabled>Hide video</button></div></div>
       <div class="demo-upper-row">
         <div class="demo-strip-wrap" aria-label="Rendered demo input images"><div class="demo-strip" id="rendered-strip" role="list"></div></div>
         <button class="selected-input-panel" id="rendered-input-open" type="button" aria-label="Open rendered demo input image"><img id="rendered-input" alt="Selected rendered demo input image" /></button>
       </div>
-      <div class="rendered-video-frame"><video id="rendered-video" controls preload="metadata" playsinline autoplay loop muted></video><div class="rendered-video-status" id="rendered-video-status">Select an input image to load its rendered video.</div></div>
+      <div class="rendered-video-frame" id="rendered-video-frame" hidden><video id="rendered-video" controls preload="none" playsinline loop muted></video><div class="rendered-video-status" id="rendered-video-status">Video is hidden until you click Show video.</div></div>
     </section>
 
   </main>
@@ -76,8 +76,7 @@
     <img id="lightbox-image" alt="Expanded selected input image" />
   </div>
 
-  <script type="module" src="https://unpkg.com/@google/model-viewer@4.1.0/dist/model-viewer.min.js"></script>
-  <script src="demo.js?v=5"></script>
+  <script src="demo.js?v=6"></script>
 </body>
 </html>
 
