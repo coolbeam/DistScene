@@ -174,7 +174,10 @@ renderedClose?.addEventListener("click", closeRenderedVideo);
 
 renderedVideo?.addEventListener("loadedmetadata", () => {
   if (renderedActive) {
-    setRenderedStatus(`Rendered video · ${(renderedActive.videoSize / 1048576).toFixed(1)} MiB · ${renderedVideo.videoWidth}×${renderedVideo.videoHeight}`);
+    if (renderedVideoStatus) {
+      renderedVideoStatus.innerHTML = `Rendered video · ${(renderedActive.videoSize / 1048576).toFixed(1)} MiB<br><span class="rendered-video-dimensions">${renderedVideo.videoWidth}×${renderedVideo.videoHeight}</span>`;
+      renderedVideoStatus.classList.remove("viewer-error");
+    }
     renderedVideo.play().catch(() => {});
   }
 });
