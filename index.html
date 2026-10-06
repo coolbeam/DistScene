@@ -60,6 +60,15 @@
       </div>
     </section>
 
+    <section class="demo-section rendered-demo-section" aria-labelledby="rendered-demo-title">
+      <div class="section-heading"><div><h2 id="rendered-demo-title">Rendered Demo</h2><p>Select an input image to view its rendered scene video.</p></div></div>
+      <div class="demo-upper-row">
+        <div class="demo-strip-wrap" aria-label="Rendered demo input images"><div class="demo-strip" id="rendered-strip" role="list"></div></div>
+        <button class="selected-input-panel" id="rendered-input-open" type="button" aria-label="Open rendered demo input image"><img id="rendered-input" alt="Selected rendered demo input image" /></button>
+      </div>
+      <div class="rendered-video-frame"><video id="rendered-video" controls preload="metadata" playsinline autoplay loop muted></video><div class="rendered-video-status" id="rendered-video-status">Select an input image to load its rendered video.</div></div>
+    </section>
+
   </main>
 
   <div class="image-lightbox" id="image-lightbox" hidden>

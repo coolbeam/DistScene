@@ -1,0 +1,142 @@
+[
+  {
+    "case": "EXT007_p90",
+    "input": "assets/rendered-inputs/EXT007_p90.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/EXT007_p90.mp4",
+    "videoSize": 15831625,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/top_input_v1/inputs/EXT007_p90.png"
+  },
+  {
+    "case": "EXT008_p90",
+    "input": "assets/rendered-inputs/EXT008_p90.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/EXT008_p90.mp4",
+    "videoSize": 11442444,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/top_input_v1/inputs/EXT008_p90.png"
+  },
+  {
+    "case": "EXT011_p90",
+    "input": "assets/rendered-inputs/EXT011_p90.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/EXT011_p90.mp4",
+    "videoSize": 10086083,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/top_input_v1/inputs/EXT011_p90.png"
+  },
+  {
+    "case": "EXT016_p90",
+    "input": "assets/rendered-inputs/EXT016_p90.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/EXT016_p90.mp4",
+    "videoSize": 7860703,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/top_input_v1/inputs/EXT016_p90.png"
+  },
+  {
+    "case": "EXT018_p90",
+    "input": "assets/rendered-inputs/EXT018_p90.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/EXT018_p90.mp4",
+    "videoSize": 7740329,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/top_input_v1/inputs/EXT018_p90.png"
+  },
+  {
+    "case": "EXT027_p75",
+    "input": "assets/rendered-inputs/EXT027_p75.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/EXT027_p75.mp4",
+    "videoSize": 10784134,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/top_input_v1/inputs/EXT027_p75.png"
+  },
+  {
+    "case": "EXT045_p90",
+    "input": "assets/rendered-inputs/EXT045_p90.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/EXT045_p90.mp4",
+    "videoSize": 5177985,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/top_input_v1/inputs/EXT045_p90.png"
+  },
+  {
+    "case": "EXT083_p75",
+    "input": "assets/rendered-inputs/EXT083_p75.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/EXT083_p75.mp4",
+    "videoSize": 10023443,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/top_input_v1/inputs/EXT083_p75.png"
+  },
+  {
+    "case": "EXT101_p90",
+    "input": "assets/rendered-inputs/EXT101_p90.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/EXT101_p90.mp4",
+    "videoSize": 6245418,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/top_input_v1/inputs/EXT101_p90.png"
+  },
+  {
+    "case": "G011_p90",
+    "input": "assets/rendered-inputs/G011_p90.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/G011_p90.mp4",
+    "videoSize": 9272249,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/top_input_v1/inputs/G011_p90.png"
+  },
+  {
+    "case": "G016_p90",
+    "input": "assets/rendered-inputs/G016_p90.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/G016_p90.mp4",
+    "videoSize": 11898373,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/top_input_v1/inputs/G016_p90.png"
+  },
+  {
+    "case": "G039_p90",
+    "input": "assets/rendered-inputs/G039_p90.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/G039_p90.mp4",
+    "videoSize": 7470826,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/top_input_v1/inputs/G039_p90.png"
+  },
+  {
+    "case": "G068_p90",
+    "input": "assets/rendered-inputs/G068_p90.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/G068_p90.mp4",
+    "videoSize": 6981804,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/top_input_v1/inputs/G068_p90.png"
+  },
+  {
+    "case": "G085_p90",
+    "input": "assets/rendered-inputs/G085_p90.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/G085_p90.mp4",
+    "videoSize": 5001053,
+    "sourceInputUrl": "http://127.0.0.1:18806/teaser_image_v2/geometry_campaign_v1/inputs_1024/G085_p90.png"
+  },
+  {
+    "case": "N048_p90",
+    "input": "assets/rendered-inputs/N048_p90.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/N048_p90.mp4",
+    "videoSize": 15443671,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/top_input_v1/inputs/N048_p90.png"
+  },
+  {
+    "case": "N090_p90",
+    "input": "assets/rendered-inputs/N090_p90.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/N090_p90.mp4",
+    "videoSize": 18450172,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/top_input_v1/inputs/N090_p90.png"
+  },
+  {
+    "case": "N102_p90",
+    "input": "assets/rendered-inputs/N102_p90.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/N102_p90.mp4",
+    "videoSize": 12118450,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/top_input_v1/inputs/N102_p90.png"
+  },
+  {
+    "case": "O19_p90",
+    "input": "assets/rendered-inputs/O19_p90.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/O19_p90.mp4",
+    "videoSize": 17197177,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/top_input_v1/inputs/O19_p90.png"
+  },
+  {
+    "case": "PIPR01_002_03b",
+    "input": "assets/rendered-inputs/PIPR01_002_03b.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/PIPR01_002_03b.mp4",
+    "videoSize": 7716920,
+    "sourceInputUrl": "http://127.0.0.1:18806/popular_ip_candidates_03a_v1/cases/PIPR01_002/input.png"
+  },
+  {
+    "case": "C064",
+    "input": "assets/rendered-inputs/C064.png",
+    "hfVideo": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/rendered_videos/C064.mp4",
+    "videoSize": 4540075,
+    "sourceInputUrl": "http://127.0.0.1:18806/asset_catalog_v1/non_topdown_20260924/inputs/C064.png"
+  }
+]

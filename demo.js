@@ -52,3 +52,49 @@ fetch("demo-selected.json?v=4").then(response => {
   if (buttons[0]) selectScene(scenes[0], buttons[0]);
 }).catch(error => setStatus(`Unable to load demo manifest: ${error.message}`, true));
 
+
+
+const renderedStrip = document.querySelector("#rendered-strip");
+const renderedInput = document.querySelector("#rendered-input");
+const renderedInputOpen = document.querySelector("#rendered-input-open");
+const renderedVideo = document.querySelector("#rendered-video");
+const renderedVideoStatus = document.querySelector("#rendered-video-status");
+let renderedActive = null;
+function setRenderedStatus(text, error = false) {
+  if (!renderedVideoStatus) return;
+  renderedVideoStatus.textContent = text;
+  renderedVideoStatus.classList.toggle("viewer-error", error);
+}
+function selectRendered(item, button) {
+  renderedActive = item;
+  renderedStrip.querySelectorAll(".demo-thumb").forEach(node => node.classList.toggle("is-active", node === button));
+  renderedInput.src = item.input;
+  renderedInput.alt = `${item.case} input image`;
+  renderedVideo.pause();
+  renderedVideo.src = item.hfVideo;
+  renderedVideo.load();
+  renderedVideo.play().catch(() => {});
+  setRenderedStatus("Loading rendered video from Hugging Face…");
+}
+renderedVideo?.addEventListener("loadedmetadata", () => {
+  if (renderedActive) {
+    setRenderedStatus(`Rendered video · ${(renderedActive.videoSize / 1048576).toFixed(1)} MiB · ${renderedVideo.videoWidth}×${renderedVideo.videoHeight}`);
+    renderedVideo.play().catch(() => {});
+  }
+});
+renderedVideo?.addEventListener("error", () => setRenderedStatus("Unable to load rendered video from Hugging Face. The file may still be uploading.", true));
+renderedInputOpen?.addEventListener("click", () => {
+  if (!renderedInput.src || !lightbox) return;
+  lightboxImage.src = renderedInput.src;
+  lightbox.hidden = false;
+  document.body.classList.add("lightbox-open");
+});
+fetch("rendered-selected.json?v=1").then(response => {
+  if (!response.ok) throw new Error(`rendered manifest HTTP ${response.status}`);
+  return response.json();
+}).then(items => {
+  renderedStrip.innerHTML = items.map(item => `<button class="demo-thumb" type="button" role="listitem"><img src="${item.input}" alt="${item.case} input image" loading="lazy"></button>`).join("");
+  const buttons = [...renderedStrip.querySelectorAll(".demo-thumb")];
+  buttons.forEach((button, index) => button.addEventListener("click", () => selectRendered(items[index], button)));
+  if (buttons[0]) selectRendered(items[0], buttons[0]);
+}).catch(error => setRenderedStatus(`Unable to load rendered manifest: ${error.message}`, true));
