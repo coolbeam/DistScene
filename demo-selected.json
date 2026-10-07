@@ -145,5 +145,19 @@
     "previewSize": 27114312,
     "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/PIPR01_002_03b/preview.glb",
     "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/PIPR01_002_03b/formal-input.png"
+  },
+  {
+    "case": "T105__io200_r4_bath_black_stone__pitch90",
+    "input": "assets/demo-inputs/T105__io200_r4_bath_black_stone__pitch90.png",
+    "previewSize": 138936680,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/T105__io200_r4_bath_black_stone__pitch90.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/T105__io200_r4_bath_black_stone__pitch90.png"
+  },
+  {
+    "case": "N024__r14_pav_pergola__outdoor_pitch90",
+    "input": "assets/demo-inputs/N024__r14_pav_pergola__outdoor_pitch90.png",
+    "previewSize": 276362988,
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/N024__r14_pav_pergola__outdoor_pitch90.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/N024__r14_pav_pergola__outdoor_pitch90.png"
   }
 ]
