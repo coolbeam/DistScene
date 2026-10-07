@@ -154,11 +154,12 @@
     "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/T105_io200_r4_bath_black_stone.png"
   },
   {
-    "case": "N024__r14_pav_pergola__outdoor_pitch90",
-    "input": "assets/demo-inputs/N024__r14_pav_pergola__outdoor_pitch90.png",
+    "case": "N024_r14_pav_pergola_outdoor",
+    "input": "assets/demo-inputs/N024_r14_pav_pergola_outdoor.png",
     "previewSize": 276362988,
-    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/N024__r14_pav_pergola__outdoor_pitch90.glb",
-    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/N024__r14_pav_pergola__outdoor_pitch90.png"
+    "hfPreview": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/previews/N024_r14_pav_pergola_outdoor.glb",
+    "hfInput": "https://huggingface.co/coolbeam/DistScene-preview-assets/resolve/main/inputs/N024_r14_pav_pergola_outdoor.png"
   }
 ]
+
 
